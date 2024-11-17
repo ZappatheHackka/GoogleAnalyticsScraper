@@ -247,25 +247,25 @@ for index, num in enumerate(CTR):
     worksheet1.write(row, 3, num, left_align_format)
 
 # Adding total clicks to Headers in row 9
-worksheet1.write(10, 0, total_clicks, left_align_format)
+worksheet1.write(9, 0, total_clicks, left_align_format)
 
-worksheet1.write(10, 1, total_imps, left_align_format)
+worksheet1.write(9, 1, total_imps, left_align_format)
 
-worksheet1.write(10, 2, average_ctr, left_align_format)
+worksheet1.write(9, 2, average_ctr, left_align_format)
 
 # Adding last month's data
-worksheet1.write(14, 0, ma_total_clicks, left_align_format)
+worksheet1.write(13, 0, ma_total_clicks, left_align_format)
 
-worksheet1.write(14, 1, ma_total_imps, left_align_format)
+worksheet1.write(13, 1, ma_total_imps, left_align_format)
 
-worksheet1.write(14, 2, ma_average_ctr, left_align_format)
+worksheet1.write(13, 2, ma_average_ctr, left_align_format)
 
 # Adding month-to-month calcs
-worksheet1.write(18, 0, chng_in_clicks, left_align_format)
+worksheet1.write(17, 0, chng_in_clicks, left_align_format)
 
-worksheet1.write(18, 1, chng_in_imps, left_align_format)
+worksheet1.write(17, 1, chng_in_imps, left_align_format)
 
-worksheet1.write(18, 2, chng_in_ctr, left_align_format)
+worksheet1.write(17, 2, chng_in_ctr, left_align_format)
 
 # --------------WRITING PAGES CLICKED TAB------------------
 
@@ -416,22 +416,22 @@ if "'http://idhoops.com/'" and "'https://idhoops.com/'" in PAGE_MA_PAGES:
 
 # Writing top pages into the 'Top Pages' column
 for col, page, in enumerate(PAGE_MA_PAGES):
-    row = col + 11
+    row = col + 9
     worksheet2.write(row, 0, page, left_align_format)
 
 # Writing clicks
 for col, click in enumerate(PAGE_MA_CLICKS):
-    row = col + 11
+    row = col + 9
     worksheet2.write(row, 1, click, left_align_format)
 
 # Writing Imps
 for col, imp in enumerate(PAGE_MA_IMPS):
-    row = col + 11
+    row = col + 9
     worksheet2.write(row, 2, imp, left_align_format)
 
 # Writing Page CTR
 for col, ctr, in enumerate(PAGE_MA_CTR):
-    row = col + 11
+    row = col + 9
     worksheet2.write(row, 3, ctr, left_align_format)
 
 workbook.close()
