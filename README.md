@@ -15,7 +15,6 @@ A Python script I wrote and use at work to generate monthly web traffic reports 
 
 This tool helps track changes in organic web traffic as I implemented SEO-related updates. It was designed to give clear, month-to-month visibility into which keywords and pages are performing and shifting.
 
-> *In retrospect, I could’ve abstracted more of the repeated logic into functions. But as the scope expanded, copy-paste happened.*
 
 ## 🚀 How to Use
 
