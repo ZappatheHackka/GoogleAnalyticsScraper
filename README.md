@@ -1,18 +1,33 @@
-A script I wrote that we use at my company to generate monthly web traffic reports.
+# Google Search Console SEO Report Generator 📈
 
-Uses xlsxwriter to create Excel spreadsheets with multiple tabs, the data itself being pulled via the Google Search Console API.
-The spreadsheet itself was designed with a two-page format in mind, based on the 'query' and 'page' arguments passed to GSC.
+A Python script I wrote and use at work to generate monthly web traffic reports using the Google Search Console API and the xlsxwriter library.
 
-The first page focused on the 'query' data; tracking our top-performing monthly keywords (those with more than an insignificant # of clicks) as well as their respective clicks, impressions, and ctr. 
-Then the monthly total clicks, impressions, and average ctr are calculated and displayed above last month's totals, before finally the month-to-month % change in all values is displayed.
+## 🔧 What It Does
 
-The second page functions more or less the same albeit with different data. Our top-ranking web pages take the place of keywords. 
-Last month's data is displayed, although given the monthly fluctuations of top-ranking pages, month-to-month comparisons are not made beyond totals.
+- Creates a formatted Excel spreadsheet with two tabs:
+  - **Query View**: Top-performing monthly keywords, with clicks, impressions, CTR, month-over-month % change, and totals.
+  - **Page View**: Top-ranking pages with similar stats (minus MoM % change due to variability).
+- Designed for a clean two-page printable layout
+- Auto-calculates deltas and aggregates
+- Custom formatting using company brand colors
 
-I used company colors in the headers, and primarily made this as a tool to track changes in web traffic as I began to implement more heavy-duty SEO-related web updates. 
-In retrospect, I'm not sure why I didn't put some of the repeated functionality(querying the API, combining 'http' & 'https' entries) into functions to make the code cleaner. 
-Seems like a logical step. I guess as the scope of the project gradually expanded I just ended up copy-pasting the initial querying, editing it to my needs.
+## 💡 Why I Built It
 
-I used some of the functions on the following webpage to help me set up the GSC API: https://engineeringfordatascience.com/posts/google_search_console_api_python/ --Very helpful tutorial!
+This tool helps track changes in organic web traffic as I implemented SEO-related updates. It was designed to give clear, month-to-month visibility into which keywords and pages are performing and shifting.
 
-Plug in your own secret keys and generate your own straightforward SEO reports.
+> *In retrospect, I could’ve abstracted more of the repeated logic into functions. But as the scope expanded, copy-paste happened.*
+
+## 🚀 How to Use
+
+- Plug in your own GSC credentials
+- Edit / Comment out lines 310-312 & 399-401 for http + https combining if necessary
+- Run the script and get a professional web traffic report instantly!
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- xlsxwriter
+- Google Search Console API
+
